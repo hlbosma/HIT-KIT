@@ -7,7 +7,7 @@ Welcome to the **HIT-KIT**, a toolkit designed to support designers in exploring
 The HIT-KIT provides hands-on resources to help you design immersive experiences that connect people to cultural heritage. It includes:
 
 * **Tutorials** for working with electronics, XR, and Unreal Engine
-* A [**digital workbook**](https://miro.com/app/board/uXjVJfhnfbI=/?share_link_id=575552301919) to guide and inspire your design process
+* A **digital workbook** to guide and inspire your design process
 * The **Immersive Heritage Design Deck** with use cases, design prompts, and insights for meaningful XR applications in heritage
 * **Digital building blocks** (code templates) to help you prototype with the ItsyBitsy and Unreal Engine
 
