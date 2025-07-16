@@ -10,4 +10,4 @@ This workbook offers:
 
 Whether you're new to XR or looking to deepen your design approach, the workbook helps you connect immersive technologies with meaningful heritage storytelling.
 
-> 🔗 Start by opening the [workbook folder](./workbook/) and follow the activities in order—or jump to the parts that best support your current design stage.
+> ▶️ Start by opening the [workbook on Miro](https://miro.com/app/board/uXjVJfhnfbI=/?share_link_id=869334795863). You can copy the templates to your own Miro board and follow the activities in order or jump to the parts that best support your current design stage.
