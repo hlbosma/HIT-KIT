@@ -36,4 +36,4 @@ Whether you're experimenting with embodied interaction or looking to build a pro
 
 The HIT-KIT was created by **Hanne Bosma** as part of the master thesis from Integrated Product Design at the faculty of Industrial Design Engineering at TU Delft.
 
-You can reach out to me through [LinkedIn](https://www.linkedin.com/in/hannebosma/).
+You can reach out to me through [**LinkedIn**](https://www.linkedin.com/in/hannebosma/).
