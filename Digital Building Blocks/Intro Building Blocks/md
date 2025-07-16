@@ -1,0 +1,15 @@
+## 🧩 Digital Building Blocks
+
+The **Digital Building Blocks** are ready-to-use templates that help you quickly start prototyping interactions between physical components and immersive digital environments.
+
+These blocks are designed to lower the technical barrier and let you focus on **creative experimentation**. Whether you’re new to coding or just want to save time, they provide a solid foundation to build from.
+
+What’s included:
+
+* **ItsyBitsy templates** (using CircuitPython) for working with sensors, actuators, and input/output logic
+* **Unreal Engine blueprints** to get started with XR environments
+* **Communication scripts** that let your microcontroller and Unreal Engine talk to each other
+
+You can use these as-is or modify them to fit your project. They’re here to help you move from idea to interaction—fast.
+
+> 🔗 Explore the [building blocks folder](./templates/) to get started.
