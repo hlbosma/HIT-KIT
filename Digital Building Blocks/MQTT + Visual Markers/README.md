@@ -1,3 +1,5 @@
+# 💡 How to use this building block
+
 ## 🔍 What the Code Does
 
 * 🌐 Connects to WiFi and an MQTT broker to send and receive messages.
