@@ -28,7 +28,7 @@ Whether you're experimenting with embodied interaction or looking to build a pro
 1. Start with the [**digital workbook**](https://miro.com/app/board/uXjVJfhnfbI=/?share_link_id=575552301919) folder to follow the design process step by step.
 2. After finishing the activities in the digital workbook, you should have a clear vision on the experience you want to create and how you can do this.
 3. Browse the **Immersive Heritage Design Deck** for ideas and insights.
-4. 3. Use the **digital building blocks** to begin prototyping in Unreal Engine or with your ItsyBitsy microcontroller.
+4. Use the **digital building blocks** to begin prototyping in Unreal Engine or with your ItsyBitsy microcontroller.
 
 > You’ll need a Connected Interaction Kit with the ItsyBitsy microcontroller and sensors to follow along fully.
 
