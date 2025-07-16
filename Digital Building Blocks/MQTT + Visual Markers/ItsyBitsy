@@ -1,0 +1,78 @@
+import time
+import board
+import digitalio
+import touchio
+from MQTT import Create_MQTT
+from settings import settings
+
+# --- MQTT Callback
+last_received_value = None
+device_received_new_value = False
+
+def handle_message(client, topic, msg):
+    global last_received_value, device_received_new_value
+    last_received_value = msg
+    device_received_new_value = True
+    print(f"📥 Message received on XR-message/trigger3: {msg}")
+
+# --- Connect to WiFi and MQTT
+print("➡️ Connecting to WiFi...")
+time.sleep(2)
+
+print("➡️ Connecting to MQTT broker...")
+client_id = settings["mqtt_clientid"]
+mqtt_client = Create_MQTT(client_id, handle_message)
+print(f"✅ Connected to MQTT as client: {client_id}")
+
+# --- MQTT Topics
+topic_trigger1 = "TUI-message/trigger1"
+topic_trigger2 = "TUI-message/trigger2"
+listen_topic = "XR-message/trigger3"
+mqtt_client.subscribe(listen_topic)
+print(f"✅ Subscribed to topic: {listen_topic}")
+
+# --- Input Setup
+touch = touchio.TouchIn(board.D13)
+
+button = digitalio.DigitalInOut(board.D7)
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.DOWN
+
+# --- Previous States
+prev_touch = False
+prev_button = False
+
+# --- Main Loop
+while True:
+    try:
+        mqtt_client.loop(0.1)
+    except (ValueError, RuntimeError) as e:
+        print("⚠️ MQTT error, attempting to reconnect...\n", e)
+        mqtt_client.reconnect()
+        continue
+
+    current_touch = touch.value
+    current_button = button.value
+
+    # --- Detect touch change
+    if current_touch != prev_touch:
+        msg = "touch_TRUE" if current_touch else "touch_FALSE"
+        mqtt_client.publish(topic_trigger1, msg)
+        emoji = "✅" if current_touch else "❌"
+        print(f"✋ Touch state changed → Sent: {msg} {emoji}")
+        prev_touch = current_touch
+
+    # --- Detect button change
+    if current_button != prev_button:
+        msg = "button_TRUE" if current_button else "button_FALSE"
+        mqtt_client.publish(topic_trigger2, msg)
+        emoji = "✅" if current_button else "❌"
+        print(f"🔘 Button state changed → Sent: {msg} {emoji}")
+        prev_button = current_button
+
+    # --- Print incoming message
+    if device_received_new_value:
+        print(f"📬 Message from XR: {last_received_value}")
+        device_received_new_value = False
+
+    time.sleep(0.05)
