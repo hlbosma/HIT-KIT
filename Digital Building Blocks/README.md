@@ -9,6 +9,6 @@ What’s included:
 * **ItsyBitsy templates** (using CircuitPython) for working with sensors, actuators, and input/output logic
 * **Unreal Engine projects** to get started with XR environments
 
-You can use these as-is or modify them to fit your project. They’re here to help you move quicklu from idea to interaction.
+You can use these as-is or modify them to fit your project. They’re here to help you move quickly from idea to interaction.
 
 > ▶️ Explore the building blocks in this folder to get started.
